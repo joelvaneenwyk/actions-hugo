@@ -12,15 +12,27 @@ export function getURL(org: string, repo: string, api: string): string {
   return url;
 }
 
+type VersionBrew = {
+  versions: {
+    stable: string;
+  };
+};
+
+type VersionGitHub = {
+  tag_name: string;
+};
+
 export async function getLatestVersion(org: string, repo: string, api: string): Promise<string> {
   const url = getURL(org, repo, api);
   const response = await fetch(url);
-  const json = await response.json();
+  const json: unknown = await response.json();
   let latestVersion = '';
   if (api === 'brew') {
-    latestVersion = json.versions.stable;
+    const brewJson = json as VersionBrew;
+    latestVersion = brewJson.versions.stable;
   } else if (api === 'github') {
-    latestVersion = json.tag_name;
+    const github = json as VersionGitHub;
+    latestVersion = github.tag_name;
   }
   return latestVersion;
 }
