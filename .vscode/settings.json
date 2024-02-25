@@ -1,4 +1,5 @@
 {
     "git.ignoreLimitWarning": true,
-    "deno.enable": false
+    "deno.enable": false,
+    "jest.enable": true
 }
