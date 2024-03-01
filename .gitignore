@@ -4,3 +4,8 @@ coverage
 .eslintcache
 .env
 node_modules
+__tests__/*.js
+__tests__/*.js.map
+src/*.js
+src/*.js.map
+.yarn/

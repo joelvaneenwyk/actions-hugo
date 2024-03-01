@@ -64,7 +64,7 @@ describe('Integration testing run()', () => {
     process.env['INPUT_HUGO-VERSION'] = 'latest';
     nock('https://formulae.brew.sh').get(`/api/formula/${Tool.Repo}.json`).reply(404);
 
-    await expect(main.run()).rejects.toThrowError(FetchError);
+    await expect(main.run()).rejects.toThrow(FetchError);
   });
 });
 
@@ -81,6 +81,6 @@ describe('showVersion()', () => {
   });
 
   test('return not found', async () => {
-    await expect(main.showVersion('gitgit', ['--version'])).rejects.toThrowError(Error);
+    await expect(main.showVersion('gitgit', ['--version'])).rejects.toThrow(Error);
   });
 });

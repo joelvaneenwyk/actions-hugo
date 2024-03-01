@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "orta.vscode-jest",
+        "firsttris.vscode-jest-runner",
+        "kavod-io.vscode-jest-test-adapter",
+        "idered.npm",
+        "christian-kohler.npm-intellisense"
+    ]
+}
