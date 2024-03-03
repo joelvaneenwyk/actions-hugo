@@ -2,6 +2,14 @@
     "git.ignoreLimitWarning": true,
     "deno.enable": false,
     "jest.enable": true,
-    "jest.jestCommandLine": "yarn test",
-    "jest.rootPath": "."
+    "jest.runMode": "watch",
+    "jest.debugMode": true,
+    "jest.nodeEnv": {
+        "NODE_ENV": "test"
+    },
+    "output.smartScroll.enabled": false,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 16,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true
 }
