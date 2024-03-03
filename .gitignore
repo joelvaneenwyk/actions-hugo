@@ -9,3 +9,7 @@ __tests__/*.js.map
 src/*.js
 src/*.js.map
 .yarn/
+.pnp.cjs
+.pnp.loader.mjs
+yarn.lock
+lib/

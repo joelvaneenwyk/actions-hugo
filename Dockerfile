@@ -1,4 +1,4 @@
-ARG NODE_VERSION=18
+ARG NODE_VERSION=20
 FROM node:${NODE_VERSION}-buster-slim
 
 SHELL ["/bin/bash", "-l", "-c"]

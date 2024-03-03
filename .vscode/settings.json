@@ -1,5 +1,7 @@
 {
     "git.ignoreLimitWarning": true,
     "deno.enable": false,
-    "jest.enable": true
+    "jest.enable": true,
+    "jest.jestCommandLine": "yarn test",
+    "jest.rootPath": "."
 }
